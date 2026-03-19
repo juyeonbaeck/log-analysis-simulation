@@ -35,7 +35,7 @@
 
 ## 🗺️ 목차
 
-1. [시스템 아키텍처 & 디렉토리 구조]()
+1. [시스템 아키텍처 & 디렉토리 구조](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#%EF%B8%8F-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98--%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
 2. [시나리오 step-by-step]()
     - Phase 1: 최초 침투 (RCE)
     - Phase 2: 내부 탐색 & 권한 상승
