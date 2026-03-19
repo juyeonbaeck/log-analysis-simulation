@@ -40,8 +40,8 @@
     - [Phase 1: 최초 침투 (RCE)](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-1-%EC%B5%9C%EC%B4%88-%EC%B9%A8%ED%88%AC-rce)
     - [Phase 2: 내부 탐색 & 권한 상승](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-2-discovery--privilege-escalation-%EB%82%B4%EB%B6%80-%ED%83%90%EC%83%89)
     - [Phase 3: 데이터 유출](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%EC%B6%9C)
-3. [실시간 탐지 자동화](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B9%A8%EC%9E%85-%EA%B0%90%EC%A7%80-%EC%9E%90%EB%8F%99%ED%99%94)
-4. [Data Validation & Visualization]()
+3. [실시간 침입 감지 자동화](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%B9%A8%EC%9E%85-%EA%B0%90%EC%A7%80-%EC%9E%90%EB%8F%99%ED%99%94)
+4. [데이터 검증 & 시각화](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B2%80%EC%A6%9D--%EC%8B%9C%EA%B0%81%ED%99%94)
 5. [Remediation & Hardening]()
 
 ---
