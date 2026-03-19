@@ -38,7 +38,7 @@
 1. [시스템 아키텍처 & 디렉토리 구조](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#%EF%B8%8F-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98--%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0)
 2. [시나리오 step-by-step](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#%EF%B8%8F-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-step-by-step)
     - [Phase 1: 최초 침투 (RCE)](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-1-%EC%B5%9C%EC%B4%88-%EC%B9%A8%ED%88%AC-rce)
-    - [Phase 2: 내부 탐색 & 권한 상승]([https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-1-%EC%B5%9C%EC%B4%88-%EC%B9%A8%ED%88%AC-rce](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-2-discovery--privilege-escalation-%EB%82%B4%EB%B6%80-%ED%83%90%EC%83%89))
+    - [Phase 2: 내부 탐색 & 권한 상승](https://github.com/juyeonbaeck/log-analysis-simulation?tab=readme-ov-file#phase-2-discovery--privilege-escalation-%EB%82%B4%EB%B6%80-%ED%83%90%EC%83%89)
     - [Phase 3: 데이터 유출]()
 3. [Real-time Detection Automation]()
 4. [Data Validation & Visualization]()
