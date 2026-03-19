@@ -1,0 +1,26 @@
+{
+  "api": {
+    "base_url": "https://api.payment-corp.internal",
+    "version": "v2",
+    "admin_pwd": "SvrAdmin@82",
+    "api_key": "pk_live_xZ91kLm3nPqR7sT2uV4wX6"
+  },
+  "internal_services": {
+    "auth_service": {
+      "url": "http://192.168.10.10:8080",
+      "password": "AuthSvc!2024"
+    },
+    "card_processor": {
+      "url": "http://192.168.10.11:9090",
+      "password": "CardProc#7x"
+    },
+    "monitoring": {
+      "url": "http://192.168.10.20:5601",
+      "monitor_password": "Mon!t0r99"
+    }
+  },
+  "jwt": {
+    "secret": "super_secret_jwt_key_do_not_share",
+    "expiry_minutes": 60
+  }
+}

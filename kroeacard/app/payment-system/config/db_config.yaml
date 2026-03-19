@@ -1,0 +1,30 @@
+database:
+  primary:
+    host: 192.168.10.5
+    port: 3306
+    name: payment_db
+    username: db_admin
+    password: "CardAdmin123!"
+
+  replica:
+    host: 192.168.10.6
+    port: 3306
+    name: payment_db
+    username: repl_user
+    replication_passwd: "Repl#Node2"
+
+  root:
+    username: root
+    root_password: "RootDB!0917"
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  redis_password: "Redis@Local01"
+
+backup:
+  schedule: "0 2 * * *"
+  dest: /app/payment-system/backup
+  ftp_host: 203.0.113.88
+  ftp_user: backup_agent
+  ftp_password: "Ftp!Backup77"

