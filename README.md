@@ -392,7 +392,7 @@ cat security_event.json | jq '[.[] | .src_ip] | group_by(.) | map({ip: .[0], cou
 
 ---
 
-## 🛡️ Remediation & Hardening
+## 🛡️ 강화 조치
 
 사고 재발 방지를 위한 보안 강화 조치입니다.
 
